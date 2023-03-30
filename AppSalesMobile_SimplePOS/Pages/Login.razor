@@ -92,39 +92,39 @@
 
     public async void LgnBtnClick()
     {
-        //try
-        //{
-        //    if (loginModel.UserName != string.Empty && loginModel.Password != string.Empty)
-        //    {
-        //        var response1 = await _loginMethods.Authenticate(loginModel);
+        try
+        {
+            if (loginModel.UserName != string.Empty && loginModel.Password != string.Empty)
+            {
+                var response1 = await _loginMethods.Authenticate(loginModel);
 
-        //        if (!string.IsNullOrWhiteSpace(response1))
-        //        {
-        //            LoginResModel arraylog = JsonConvert.DeserializeObject<LoginResModel>(response1);
+                if (!string.IsNullOrWhiteSpace(response1))
+                {
+                    LoginResModel arraylog = JsonConvert.DeserializeObject<LoginResModel>(response1);
 
-        //            if (arraylog.ResponseType == 1)
-        //            {
-        //                Navigation.NavigateTo("home");
-        //            }
-        //            else if (arraylog.ResponseType == 2)
-        //            {
-        //                await App.Current.MainPage.DisplayAlert("Alert", "Invalid User", "Cancel");
-        //            }
+                    if (arraylog.ResponseType == 1)
+                    {
+                        Navigation.NavigateTo("home");
+                    }
+                    else if (arraylog.ResponseType == 2)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Alert", "Invalid User", "Cancel");
+                    }
 
 
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine(response1);
-        //            await App.Current.MainPage.DisplayAlert("Oops", "Invalid username or Password", "Cancel");
-        //        }
+                }
+                else
+                {
+                    Console.WriteLine(response1);
+                    await App.Current.MainPage.DisplayAlert("Oops", "Invalid username or Password", "Cancel");
+                }
 
-        //    }
-        //}
-        //catch (Exception)
-        //{
-        //    await App.Current.MainPage.DisplayAlert("Oops", "Check your Connection !!! ", "Cancel");
-        //}
+            }
+        }
+        catch (Exception)
+        {
+            await App.Current.MainPage.DisplayAlert("Oops", "Check your Connection !!! ", "Cancel");
+        }
 
 
 
