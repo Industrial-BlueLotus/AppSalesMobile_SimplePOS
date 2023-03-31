@@ -14,43 +14,43 @@
                 <MudItem xs="2"></MudItem>
                 <MudItem xs="8" Class="d-flex align-center justify-center mt-4"><MudImage Src="./Img/logo.jpeg" Width="180" Height="180" Alt="logo" Elevation="25" Class="rounded-lg" Style="box-shadow:none" /></MudItem>
                 <MudItem xs="2"></MudItem>
-                <MudItem xs="12" Class="d-flex align-center justify-center mt-4">
+                <MudItem xs="12" Class="d-flex align-center justify-center mt-4" >
                     <MudText Typo="Typo.h4">App Sales Viewer</MudText>
                 </MudItem>
             </MudGrid>
         </MudItem>
         
 
-        <MudItem xs="12" Class="d-flex align-center justify-center pa-2" >
+        <MudItem xs="12" Class="d-flex align-center justify-center" >
             <MudGrid>
                 <MudItem xs="1" Class="pa-0"></MudItem>
                 <MudItem xs="10">
                     <MudGrid>
 
 
-                        <MudItem xs="12" Class="d-flex align-center justify-center pl-4 pr-4 mr-4 ml-4">
+                        <MudItem xs="12" Class="d-flex align-center justify-center pl-4 pr-4 mr-4 ml-4" Style="width:calc( 80vh );height:calc( 10vh )">
                             <MudGrid>
-                                <MudItem xs="2"></MudItem>
-                                <MudItem xs="8">
+                                <MudItem xs="1"></MudItem>
+                                <MudItem xs="10" >
                                     <MudTextField @bind-Value="loginModel.UserName" Required="true" Label="User Name" Variant="Variant.Outlined" Margin="Margin.Dense"></MudTextField>
                                 </MudItem>
-                                <MudItem xs="2"></MudItem>
+                                <MudItem xs="1"></MudItem>
                             </MudGrid>
 
                         </MudItem>
-                        <MudItem xs="12" Class="d-flex align-center justify-center pl-4 pr-4 mr-4 ml-4">
+                        <MudItem xs="12" Class="d-flex align-center justify-center pl-4 pr-4 mr-4 ml-4" Style="width:calc( 80vh )">
                             <MudGrid>
-                                <MudItem xs="2"></MudItem>
-                                <MudItem xs="8">
+                                <MudItem xs="1"></MudItem>
+                                <MudItem xs="10" >
                                     <MudTextField @bind-Value="loginModel.Password" Label="Password" Required="true" Variant="Variant.Outlined"
                                                   InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon"
                                                   OnAdornmentClick="ButtonTestclick" AdornmentAriaLabel="Show Password" Margin="Margin.Dense" />
                                 </MudItem>
-                                <MudItem xs="2"></MudItem>
+                                <MudItem xs="1"></MudItem>
                             </MudGrid>
 
                         </MudItem>
-
+                        <MudItem xs="12" Class="d-flex align-center justify-center pl-4 pr-4 mr-16 ml-16 "></MudItem>
                         <MudItem xs="12" Class="d-flex align-center justify-center pl-4 pr-4 mr-16 ml-16 ">
                             <MudButton Variant="Variant.Filled" OnClick="LgnBtnClick" Style="background-color:#02198B;color:white;width:120px;height:45px;font-size:larger;border-radius:10px">
                                 Login
