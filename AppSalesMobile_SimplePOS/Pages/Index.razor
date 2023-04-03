@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/home"
 @layout MainLayout
 
 <MudLayout>
@@ -29,13 +29,28 @@
 
 @code{
 
-    public string UserCompany { get; set; }
-    
-    public string UserName { get; set; }
+    public string UserCompany { get; set; } = "Company";
+
+    public string UserName { get; set; } = "User";
+
+    public async void Load()
+    {
+
+
+        UserName = _loginState.GetUserName();
+        Console.WriteLine(UserName);
+
+        var Company = _loginState.GetUserCompany();
+        UserCompany = Company.CompanyName;
+        Console.WriteLine(UserCompany);
+
+
+        StateHasChanged();
+
+    }
 
     protected override void OnInitialized()
     {
-        UserCompany = "Company";
-        UserName = "User";
+        Load();
     }
 }

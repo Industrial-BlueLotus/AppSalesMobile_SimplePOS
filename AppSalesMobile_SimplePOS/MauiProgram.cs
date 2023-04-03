@@ -2,7 +2,6 @@
 using AppSalesMobile_SimplePOS.Data;
 using MudBlazor.Services;
 using AppSalesMobile_SimplePOS.Data.Login;
-//using AppSalesMobile_SimplePOS.Models.Login;
 
 namespace AppSalesMobile_SimplePOS;
 
@@ -21,8 +20,8 @@ public static class MauiProgram
         builder.Services.AddMauiBlazorWebView();
         builder.Services.AddMudServices();
         builder.Services.AddSingleton<LoginMethods>();
-        //builder.Services.AddScoped<LoginMethods>();
-       
+        builder.Services.AddScoped<LoginStateService>();
+
 
 
 #if DEBUG
