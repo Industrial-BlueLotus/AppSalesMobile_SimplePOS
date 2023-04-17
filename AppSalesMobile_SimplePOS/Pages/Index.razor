@@ -36,13 +36,17 @@
     public async void Load()
     {
 
-
         UserName = _loginState.GetUserName();
         Console.WriteLine(UserName);
 
-        var Company = _loginState.GetUserCompany();
-        UserCompany = Company.CompanyName;
+        UserCompany = _loginState.GetUserCompany();
         Console.WriteLine(UserCompany);
+        //UserName = _loginState.GetUserName();
+        //Console.WriteLine(UserName);
+
+        //var Company = _loginState.GetUserCompany();
+        //UserCompany = Company.CompanyName;
+        //Console.WriteLine(UserCompany);
 
 
         StateHasChanged();

@@ -100,15 +100,15 @@
 
                 if (!string.IsNullOrWhiteSpace(response1))
                 {
-                    LoginResModel arraylog = JsonConvert.DeserializeObject<LoginResModel>(response1);
+                    NewLoginResModel arraylog = JsonConvert.DeserializeObject<NewLoginResModel>(response1);
 
-                    if (arraylog.ResponseType == 1)
+                    if (arraylog.isSuccess == true)
                     {
                         Navigation.NavigateTo("home");
                     }
-                    else if (arraylog.ResponseType == 2)
+                    else
                     {
-                        await App.Current.MainPage.DisplayAlert("Alert", "Invalid User", "Cancel");
+                        await App.Current.MainPage.DisplayAlert("Oops", "Invalid username or Password", "Cancel");
                     }
 
 
