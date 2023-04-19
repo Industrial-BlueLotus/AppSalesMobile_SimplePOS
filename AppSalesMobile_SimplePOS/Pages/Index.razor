@@ -10,12 +10,9 @@
             <MudItem xs="5" Class="d-flex align-center justify-left pa-0">
                 <MudText Class="ml-4" Style="font-weight:800;font-size:large">@UserCompany</MudText>
             </MudItem>
-            @*<MudItem xs="4" Class="d-flex align-bottom justify-left">
-
-            </MudItem>*@
             <MudItem xs="6" >
                 <MudGrid>
-                    <MudItem xs="8" Class="d-flex align-center justify-center">
+                    <MudItem xs="8" Class="d-flex align-center justify-right">
                         <MudText>@UserName</MudText>
                     </MudItem>
                     <MudItem xs="4" Class="d-flex align-center justify-center">
@@ -25,9 +22,57 @@
             </MudItem>
         </MudGrid>
       </MudAppBar>
+    <MudMainContent Class="pt-0 pb-0 pl-3 pr-3">
+          <MudGrid>
+            <MudItem xs="12" Class="pt-8">
+                <MudCarousel Class="mud-width-full" Style="height:200px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+                    <MudCarouselItem Transition="Transition.Slide" Color="@Color.Primary">
+                        <div class="d-flex" style="height:100%">
+                            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+                        </div>
+                    </MudCarouselItem>
+                    <MudCarouselItem Transition="Transition.Slide" Color="@Color.Secondary">
+                        <div class="d-flex" style="height:100%">
+                            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+                        </div>
+                    </MudCarouselItem>
+                    <MudCarouselItem Transition="Transition.Slide">
+                        <div class="d-flex" style="height:100%">
+                            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Color="@Color.Primary" Size="@Size.Large" />
+                        </div>
+                    </MudCarouselItem>
+                </MudCarousel>
+             </MudItem>
+
+             <MudItem xs="12">
+                <MudGrid Class="pr-2 pl-2 pt-0 pb-0">
+                     <MudItem xs="6" Class="d-flex align-center justify-center">
+                        <MudButton Variant="Variant.Filled" Color="Color.Info" Class="pa-8" Size="Size.Large">Primary</MudButton>
+                     </MudItem>
+                     <MudItem xs="6" Class="d-flex align-center justify-center">
+                        <MudButton Variant="Variant.Filled" Color="Color.Info" Class="pa-8" Size="Size.Large">Primary</MudButton>
+                     </MudItem>
+                    <MudItem xs="6" Class="d-flex align-center justify-center">
+                        <MudButton Variant="Variant.Filled" Color="Color.Info" Class="pa-8" Size="Size.Large">Primary</MudButton>
+                     </MudItem>
+                    <MudItem xs="6" Class="d-flex align-center justify-center">
+                        <MudButton Variant="Variant.Filled" Color="Color.Info" Class="pa-8" Size="Size.Large">Primary</MudButton>
+                     </MudItem>
+                 </MudGrid>
+             </MudItem>
+          </MudGrid>
+      </MudMainContent>
 </MudLayout>
 
 @code{
+
+    private bool arrows = true;
+
+    private bool bullets = true;
+
+    private bool enableSwipeGesture = true;
+
+    private bool autocycle = true;
 
     public string UserCompany { get; set; } = "Company";
 
